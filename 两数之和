@@ -1,0 +1,19 @@
+class Solution(object):
+    def twoSum( self,nums, target):
+        length1 = len(nums)
+        for n in range(0, length1):
+             for m in range(1, length1):
+                result_1 = nums[n]
+                result_2 = nums[m]
+                if m != n:
+                    if result_1 + result_2 == target:
+                        return [n, m]
+
+
+
+
+nums = [2,5,5,11]
+target = 10
+self = 0
+result = Solution.twoSum(self,nums, target)
+print(result)
