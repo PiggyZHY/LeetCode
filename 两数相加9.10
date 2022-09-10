@@ -1,0 +1,41 @@
+class Solution(object):
+    def addTwoNumbers(self, l1, l2):
+        data1 = output(l1)
+        data2 = output(l2)
+        data = data1 + data2
+        l3 = ListNode(0)
+        l3 = creat_List(l3, data)
+        return l3
+
+class ListNode(object):
+    def __init__(self, val=0, next =None):
+        self.val = val
+        self.next = next
+
+def output(self):
+    sum =0
+    i = 1
+    while(self != None):
+        sum = sum+self.val * i
+        self = self.next
+        i= i*10
+    return sum
+
+def creat_List(self, data):
+    self = ListNode(0)
+    node = self
+    for i in range(0, len(str(data))):
+        node_temp = ListNode(data % 10)
+        node.next = node_temp
+        node = node.next
+        data = int(data / 10)
+    self = self.next
+    return self
+
+
+l1 = ListNode(0)
+l1 = creat_List(l1, 243)
+l2 = ListNode(0)
+l2 = creat_List(l2, 564)
+self = ListNode(0)
+Solution.addTwoNumbers(self, l1, l2)
